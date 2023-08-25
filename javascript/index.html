@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapremina valjka</title>
+</head>
+<body>
+   
+    <script type="text/javascript">
+
+ function poluprecnik_osnove_valjka (r) {
+                    return r * r * 3.14;
+                    // ili ovako:
+                    // return Math.pow(r, 2) * Math.PI;
+               }
+
+               function povrsina_omotaca(r, h) {
+                    return 2 * r * Math.PI * h;
+               }
+
+               function povrsina_valjka(r, h) {
+                    return 2 * poluprecnik_osnove_valjka(r) + povrsina_omotaca(r, h);
+               }
+
+               var x = prompt("Unesite poluprecnik osnove valjka(r):");
+
+               alert("Povrsina baze je " + poluprecnik_osnove_valjka(x));
+
+               var y = prompt("Unesite visinu (h):");
+
+               alert("Povrsina omotaca je " + povrsina_omotaca(x, y));
+
+               alert("Povrsina cijlog valjka je " + povrsina_valjka(x, y));
+
+          </script>
+       
+</script>
+   
+</body>
+</html>
